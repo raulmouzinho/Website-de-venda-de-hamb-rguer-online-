@@ -1,0 +1,255 @@
+*{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                text-decoration: none;
+                list-style-type: none;
+            }
+           
+            .margem{
+                max-width: 1340px;
+                margin: 0 auto;
+                padding: 0 5%;
+            } 
+
+            /*Estilizando o menu de navegação*/
+           
+            header{
+               position: sticky;
+               top: 0;
+               left: 0;
+               } 
+            nav{
+                background-color: #780507;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 2px 8px #78050722;
+                transition: box-shadow 0.3s;
+                display: flex;
+                padding: 10px;
+            }
+             nav ul h1{
+                    color: #fafafa;
+                    font-size: 18px;
+                }
+             nav  .cont-hum .logo{
+                display: flex;                
+             }                          
+            nav ul{
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+            nav img{
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+                margin-right: 1rem;
+                box-shadow: 0 2px 8px #78050722;
+            }          
+            nav .menu-links{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-left: 2em;                
+            }
+            nav .menu-links li{
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            nav .menu-links li a{
+                display: flex;
+                align-items: center;
+                color: white;
+                font-size: 1.08rem;
+                font-weight: 500;
+                padding: 8px 16px;
+                border-radius: 8px;
+                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+             }
+             nav .menu-links li a.active,
+             nav .menu-links li a:focus {
+                background: #780507;
+                color: #780507;
+                box-shadow: 0 2px 8px #d2691e22;
+                font-weight: bold;
+            }
+              nav .menu-links li a:hover{
+              background-color: #d2691e;
+                color: #ffffff;
+                text-decoration: none;
+                font-weight: bold;
+              }
+            nav .menu-links li a i{
+                font-size: 1.3em;
+                margin-right: 8px;
+                color: #FDBE07;
+                transition: color 0.2s;
+                vertical-align: middle;
+            }
+            nav .menu-links li a:hover i,
+            nav .menu-links li a.active i {
+                color: #FDBE07;
+            }
+            nav ul .menu-links #entrar{               
+                padding: 10px 15px;
+                margin-left: 5em;
+                background-color: #FDBE07;
+                color: #ffffff;       
+                font-weight: bold;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px #78050722;
+             }
+              nav ul .menu-links #entrar:hover{               
+                transition: background 0.2s, color 0.2s;
+              }
+              nav .cont-hum .logo label{
+                color: white;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-left: 12px;
+                line-height: 60px;
+              }
+            .header-logo{
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .header-logo i{
+                font-size: 3.5rem;
+                color: #fafafa;
+                margin-right: 6px;
+            }
+             .header-logo i:hover{
+                background-color: #FDBE07;
+             }
+          
+             .menu-hamburguer {
+                display: none;
+                position: absolute;
+                right: 32px;
+                top: 24px;
+                z-index: 10;
+                width: 44px;
+                height: 44px;
+                background: #780507;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px #78050722;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: background box-shadow 0.2s;
+            }
+            .menu-hamburguer:hover {
+                background: #d2691e;
+            }
+            .menu-hamburguer span,
+            .menu-hamburguer span::before,
+            .menu-hamburguer span::after {
+                display: block;
+                position: absolute;
+                width: 28px;
+                height: 4px;
+                background: #fffbe7;
+                border-radius: 2px;
+                transition: 0.3s;
+            }
+            .menu-hamburguer span {
+                top: 20px;
+                left: 8px;
+            }
+            .menu-hamburguer span::before {
+                content: '';
+                top: -10px;
+                left: 0;
+            }
+            .menu-hamburguer span::after {
+                content: '';
+                top: 10px;
+                left: 0;
+            }            
+         
+   
+            @media (max-width: 900px){
+                .menu-hamburguer{
+                    display: flex;
+                    margin: 0 19px 0 0;
+                }
+             
+                nav .menu-links{
+                    display: none;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: self-start;
+                    position: fixed;
+                    top: 70px;
+                    left: auto;
+                    width: 30%;
+                    background: #780507ee;
+                    box-shadow: 0 4px 24px #78050722;
+                    border-radius: 0 0 18px 18px;
+                    padding: 24px 0 8px 0;
+                    z-index: 50;
+                }
+                nav .menu-links.active{
+                    display: flex;                    
+                }
+                nav .menu-links li a >i{
+                    margin-right: 20px;
+                    font-size: 20px;
+                }
+                nav ul h1{
+                    color: #fafafa;
+                }
+                 nav ul .menu-links #entrar{               
+                padding: 10px 15px;            
+                color: #000000;     
+                background: none;
+                margin-left: auto;   
+                font-weight: normal;    
+                margin-top: 10px;   
+                background: #E6D282; 
+                font-weight: 700;   
+                border-radius: 0 8px 8px 0;
+                box-shadow: 0 2px 8px #78050722;
+             }
+                nav ul .menu-links #entrar:hover{              
+                background: #d2691e;                
+                font-weight: bold;
+                border-radius: 0 8px 8px 0;               
+             }
+              nav .menu-links li a:hover{
+                border-radius: 0 8px 8px 0;
+              }
+         }
+
+            @media (min-width: 900px) and (max-width: 1260px){               
+                nav .menu-links {
+                    display: none;
+                    flex-direction: row;
+                    gap: 1px;
+                    justify-content: center;
+                    align-items: center;                     
+                    position: absolute;
+                    top: 70px;
+                    left: 5%;
+                    width: 84%;
+                    background: #780507ee;
+                    box-shadow: 0 4px 24px #78050722;
+                    border-radius: 0 0 18px 18px;
+                    padding: 24px 0 8px 0;
+                   z-index: 20;
+                    flex-wrap: nowrap;
+                } 
+         }
+            @media (max-width: 446px){
+                nav ul h1{
+                    color: #fafafa;
+                    display: none;                   
+                }   
+         }
+         
+            
+             
