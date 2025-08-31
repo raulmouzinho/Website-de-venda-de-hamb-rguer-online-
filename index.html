@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale=1.0">
+        <title>Humburgaria Victómar</title>
+        <link rel="shortcut icon" href="inserir o caminho do seu icone " type="image/x-icon">
+        <link rel="stylesheet" href="stilo/header.css">
+        <link rel="stylesheet" href="stilo/main.css">
+        <link rel="stylesheet" href="stilo/card.css">
+        <link rel="stylesheet" href="stilo/deppimentos.css">
+        <link rel="stylesheet" href="stilo/aside.css">
+        <link rel="stylesheet" href="stilo/footer.css">    
+        <!-- Adiciona Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!-- Adiciona Animate.css para animações -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <style>
+            body{
+                 background:  #f8bf0234 url(img/main.png) center no-repeat fixed;
+                background-size: cover; 
+            }
+            /* Responsividade global */
+                body, html {
+                    width: 100%;
+                    min-height: 100vh;
+                    overflow-x: hidden;
+                }
+                .margem {
+                    max-width: 1340px;
+                    margin: 0 auto;
+                    padding: 0 5vw;
+                }
+                header, nav, .menu-links, .conteiner, .conteiner-main, .cards, .depoimentos, .footer-content, .lateral-info .conteinera {
+                    box-sizing: border-box;
+                }
+                .menu-links{
+                    flex-wrap: wrap;
+                }
+                .menu-links li{
+                    min-width: 120px;
+                    justify-content: center;
+                }
+              
+        </style>
+        <script src="depoimentos.js" defer></script>
+    </head>
+    <body>       
+            <header> 
+                <div class="margem">      
+                    <nav>
+                         <div class="cont-hum">
+                            <div class="logo">
+                                <img src="img/logo.png" alt="Logomarca">
+                            </div>
+
+                            <div class="menu-hamburguer" onclick="toggleMenu()">
+                                <span></span>
+                            </div>
+                            
+                          </div>  
+                        <ul>
+                            <h1>Hambúrgaria Victómar</h1>
+                            <!-- Ícone Bootstrap -->
+                            <i class="bi bi-hamburger animate__animated animate__bounceIn animate__delay-1s"></i>
+                        
+                            <div class="menu-links" id="menuLinks">
+                                <li><a href="#home"><i class="bi bi-house-door"></i> Início</a></li>
+                                <li><a href="#cardapio"><i class="bi bi-list-ul"></i> Cardápio</a></li>
+                                <li><a href="#promocoes"><i class="bi bi-fire"></i> Promoções</a></li>
+                                <li><a href="#sobre"><i class="bi bi-info-circle"></i> Sobre</a></li>
+                                <li><a href="#contato"><i class="bi bi-envelope"></i> Contato</a></li>
+                                <li ><a href="#contato" id="entrar"><i class="bi bi-person-circle"></i> Entrar</a></li>
+                            </div>
+                        </ul>                      
+
+                    </nav>
+                </div>
+            </header>      
+            <main class="animate__animated animate__fadeIn animate__slower">                               
+                        <div class="margem">
+                         <div class="conteiner"> 
+
+                            <div class="conteiner-main">
+                                        
+                                <div class="imagem">
+                                    <img src="img/pgs.png" alt="">
+                                   
+                                </div>
+                                
+                                <div class="box-text">
+
+                                    <h1> O Hambúrguer dos Seus Sonhos,</h1>
+                                    <h1>na Porta da Sua Casa!</h1>
+                                    <p>Suculentos, artesanais e preparados com ingredientes fresquinhos. Peça online e receba rapidinho!</p>
+
+                                
+
+
+                                    <!-- NEWSLETTER -->
+                                    <section class="newsletter">
+                                        <h2>📩 Receba Ofertas Suculentas no Seu E-mail</h2>
+                                        <p>Assine nossa newsletter e ganhe <strong>10% de desconto</strong> no próximo pedido!</p>
+                                        <form action="#" method="post" class="newsletter-form">
+                                        <input type="email" placeholder="Digite seu e-mail" required>
+                                        <button type="submit" class="btn btn-primary">Quero Receber</button>
+                                        </form>
+                                        
+                                    </section>
+
+                                    <img src="img/teste.png" alt="">
+
+                                </div>
+
+                            </div>
+                        </div>                                          
+                        </div>          
+            </main>
+                
+              <!-- CARDS DE PRODUTOS -->             
+                <section id="produtos" class="produtos animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="margem">
+                        <div class="cards">
+                            <div class="card">
+                                <h3>Clássico da Casa</h3>
+                                <p>Pão macio, carne 180g, queijo cheddar derretido, alface crocante e nosso molho especial.</p>
+                                <span class="preco">A partir de Kz 3.500</span>
+                                <button class="btn btn-primary">Adicionar ao Carrinho</button>
+                            </div>
+                        
+                            <div class="card">
+                                <h3>Bacon Lovers</h3>
+                                <p>Carne suculenta, cheddar, fatias generosas de bacon crocante e maionese artesanal.</p>
+                                <span class="preco">A partir de Kz 4.000</span>
+                                <button class="btn btn-primary">Quero Esse</button>
+                            </div>
+                        
+                            <div class="card">
+                                <h3>Veggie Fresh</h3>
+                                <p>Hambúrguer de grão-de-bico, alface, tomate, queijo e maionese verde da casa.</p>
+                                <span class="preco">A partir de Kz 3.200</span>
+                                <button class="btn btn-primary">Experimentar</button>
+                            </div>
+                            <div class="card">
+                                <h3>Veggie Fresh</h3>
+                                <p>Hambúrguer de grão-de-bico, alface, tomate, queijo e maionese verde da casa.</p>
+                                <span class="preco">A partir de Kz 3.200</span>
+                                <button class="btn btn-primary">Experimentar</button>
+                            </div>
+
+                        </div>
+                    </div>    
+           
+              <!-- SEÇÃO DE SATISFAÇÃO DOS CLIENTES -->
+                <section id="satisfacao" class="satisfacao animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="margem"> 
+                        
+                        <h2>💬 Satisfação dos Nossos Clientes</h2>
+                        <div class="depoimentos">
+                            <div class="depoimento">
+                                 <div class="imagem1">
+                                    <img src="img/teste.png" alt="">
+                                </div>
+                               
+                                <span>Carla, Luanda</span>
+                                <p>Melhor hambúrguer que já comi! Entrega super</p>
+                                <p>rápida e embalagem impecável.</p>                                
+                            </div>
+                            <div class="depoimento">
+                                  <div class="imagem1">
+                                    <img src="img/teste.png" alt="">
+                                </div>
+                                 <span>- Miguel, Viana</span>
+                                <p>"O sabor é incrível, parece que foi feito na hora.</p>
+                                <p>O Bacon Lovers é sensacional!"</p>
+                               
+                            </div>
+                            <div class="depoimento">
+                                  <div class="imagem1">
+                                    <img src="img/teste.png" alt="">
+                                </div>
+                                <span>- Sofia, Talatona</span>
+                                <p>"Finalmente um hambúrguer vegetariano de verdade!</p>
+                                <p>O Veggie Fresh é o meu favorito."</p>                                
+                            </div>                        
+                        </div>
+                    </div>
+                    
+                </section>
+                      
+                
+                <aside class="lateral-info animate__animated animate__fadeInRight animate__delay-3s">
+                    <div class="margem"> 
+                        <div class="conteinera"> 
+                               <section class="info-entrega">
+                                <h3>🚚 Entrega Rápida</h3>
+                                <p>Receba seu hambúrguer quentinho em até <strong>30 minutos</strong></p>
+                                <p>para áreas próximas. Sujeito à disponibilidade e localização</p>
+                                <img src="img/Imagem2.png" alt="">
+                                <p id="p">Mais de 100 mil clientes satisfeitos com os nossos  serviços.</p>
+                            </section>                            
+
+                            <section class="redes-sociais">
+                            <img src="img/teste.png" alt="">
+                            </section>
+                        </div>
+
+                    </div>
+                </aside>
+
+                  <!-- FOOTER -->
+                    <footer class="animate__animated animate__fadeInUp animate__delay-4s">
+                        <div class="margem">
+                            <div class="footer-content">
+                                <div class="footer-about">
+                                    <h3>Sobre Nós</h3>
+                                    <p>Na <strong></strong>, acreditamos que comer bem é </p> 
+                                    <p>um prazer que deve estar ao alcance de todos</p>
+                                    <p>Nossos hambúrgueres são preparados artesanalmente</p>
+                                    <p>e entregues com carinho</p>
+                                </div>
+
+                                <div class="footer-links">
+                                    <h3>Links Rápidos</h3>
+                                    <ul>
+                                    <li><a href="#produtos">Cardápio</a></li>
+                                    <li><a href="#promo">Promoções</a></li>
+                                    <li><a href="#contato">Contato</a></li>
+                                    <li><a href="#conta">Minha Conta</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="footer-contact">
+                                    <h3>Contato</h3>
+                                    <p>📍 Av. do Sabor, 123 – Luanda, Angola</p>
+                                    <p>📞 +244 999 999 999</p>
+                                    <p>✉ contato@burgermax.com</p>
+                                </div>
+                                </div>
+                                
+                        </div>
+                        </div>
+                    </footer>
+
+
+
+            
+
+          
+          
+            <script>        
+                function toggleMenu() {
+                        var menu =  document.getElementById('menuLinks');
+                        menu.classList.toggle('active');
+                        }
+                         
+            </script>
+        
+    </body>
+</html>
+
+
